@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to setup Visual Studio Express to work with OpenGL on Windows | Programming Tips and More</title>
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://newseasandbeyond.wordpress.com/xmlrpc.php">
+
+<link rel="dns-prefetch" href="https://s2.wp.com/">
+<link rel="dns-prefetch" href="https://s1.wp.com/">
+<link rel="dns-prefetch" href="https://s0.wp.com/">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="https://s.pubmine.com/">
+<link rel="dns-prefetch" href="https://x.bidswitch.net/">
+<link rel="dns-prefetch" href="https://static.criteo.net/">
+<link rel="dns-prefetch" href="https://ib.adnxs.com/">
+<link rel="dns-prefetch" href="https://aax.amazon-adsystem.com/">
+<link rel="dns-prefetch" href="https://bidder.criteo.com/">
+<link rel="dns-prefetch" href="https://cas.criteo.com/">
+<link rel="dns-prefetch" href="https://gum.criteo.com/">
+<link rel="dns-prefetch" href="https://ads.pubmatic.com/">
+<link rel="dns-prefetch" href="https://gads.pubmatic.com/">
+<link rel="dns-prefetch" href="https://tpc.googlesyndication.com/">
+<link rel="dns-prefetch" href="https://ad.doubleclick.net/">
+<link rel="dns-prefetch" href="https://googleads.g.doubleclick.net/">
+<link rel="dns-prefetch" href="https://www.googletagservices.com/">
+<link rel="dns-prefetch" href="https://cdn.switchadhub.com/">
+<link rel="dns-prefetch" href="https://delivery.g.switchadhub.com/">
+<link rel="dns-prefetch" href="https://delivery.swid.switchadhub.com/">
+<link rel="alternate" type="application/rss+xml" title="Programming Tips and More » Feed" href="https://newseasandbeyond.wordpress.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Programming Tips and More » Comments Feed" href="https://newseasandbeyond.wordpress.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Programming Tips and More » How to setup Visual Studio Express to work with OpenGL on&nbsp;Windows Comments Feed" href="https://newseasandbeyond.wordpress.com/2014/01/19/how-to-setup-visual-studio-express-to-work-with-opengl-on-windows/feed/">
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+			<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s2.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1505864856h&ver=4.9.1"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56794,8205,9794,65039],[55358,56794,8203,9794,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/wp-emoji-release.js" type="text/javascript" defer="defer"></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="all-css-0-1" href="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/a_002.css" type="text/css" media="all">
+<link rel="stylesheet" id="typo-vast-shadow-css" href="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/css_002.css" type="text/css" media="all">
+<link rel="stylesheet" id="typo-droid-serif-css" href="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/css.css" type="text/css" media="all">
+<link rel="stylesheet" id="all-css-4-1" href="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/a.css" type="text/css" media="all">
+<link rel="stylesheet" id="print-css-5-1" href="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/global-print.css" type="text/css" media="print">
+<link rel="stylesheet" id="all-css-6-1" href="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/a_003.css" type="text/css" media="all">
+<script type="text/javascript">
+/* <![CDATA[ */
+var related_posts_js_options = {"post_heading":"h4"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/a_002.js"></script>
+<link rel="stylesheet" id="all-css-0-2" href="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/style.css" type="text/css" media="all">
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='highlander-comments-ie7-css'  href='https://s1.wp.com/wp-content/mu-plugins/highlander-comments/style-ie7.css?m=1351637563h&#038;ver=20110606' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://newseasandbeyond.wordpress.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s1.wp.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="How to setup and use virtualenv with&nbsp;Windows" href="https://newseasandbeyond.wordpress.com/2014/01/12/how-to-setup-and-use-virtualenv-with-windows/">
+<link rel="next" title="Creating in memory zip file with&nbsp;Python" href="https://newseasandbeyond.wordpress.com/2014/01/27/creating-in-memory-zip-file-with-python/">
+<meta name="generator" content="WordPress.com">
+<link rel="canonical" href="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/a.htm">
+<link rel="shortlink" href="https://wp.me/p3znLT-19">
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/?format=json&amp;url=https%3A%2F%2Fnewseasandbeyond.wordpress.com%2F2014%2F01%2F19%2Fhow-to-setup-visual-studio-express-to-work-with-opengl-on-windows%2F&amp;for=wpcom-auto-discovery"><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/?format=xml&amp;url=https%3A%2F%2Fnewseasandbeyond.wordpress.com%2F2014%2F01%2F19%2Fhow-to-setup-visual-studio-express-to-work-with-opengl-on-windows%2F&amp;for=wpcom-auto-discovery">
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to setup Visual Studio Express to work with OpenGL on Windows">
+<meta property="og:url" content="https://newseasandbeyond.wordpress.com/2014/01/19/how-to-setup-visual-studio-express-to-work-with-opengl-on-windows/">
+<meta property="og:description" content="Requirements Visual Studio Express The first thing to do, if you already haven’t done, is install the Visual Studio Express software. Probably this tutorial also works for the other versions …">
+<meta property="article:published_time" content="2014-01-19T13:45:35+00:00">
+<meta property="article:modified_time" content="2014-01-26T18:49:30+00:00">
+<meta property="og:site_name" content="Programming Tips and More">
+<meta property="og:image" content="https://newseasandbeyond.files.wordpress.com/2014/01/right_click_solution.jpg">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:site" content="@wordpressdotcom">
+<meta name="twitter:text:title" content="How to setup Visual Studio Express to work with OpenGL on&nbsp;Windows">
+<meta name="twitter:image" content="https://newseasandbeyond.files.wordpress.com/2014/01/new_project_wizard.jpg?w=240">
+<meta name="twitter:card" content="summary">
+<meta property="fb:app_id" content="249643311490">
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom">
+<link rel="shortcut icon" type="image/x-icon" href="https://s2.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48">
+<link rel="icon" type="image/x-icon" href="https://s2.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48">
+<link rel="apple-touch-icon-precomposed" href="https://s0.wp.com/i/webclip.png">
+<link rel="openid.server" href="https://newseasandbeyond.wordpress.com/?openidserver=1">
+<link rel="openid.delegate" href="https://newseasandbeyond.wordpress.com/">
+<link rel="search" type="application/opensearchdescription+xml" href="https://newseasandbeyond.wordpress.com/osd.xml" title="Programming Tips and More">
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com">
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+				<style type="text/css">
+			.recentcomments a {
+				display: inline !important;
+				padding: 0 !important;
+				margin: 0 !important;
+			}
+
+			table.recentcommentsavatartop img.avatar, table.recentcommentsavatarend img.avatar {
+				border: 0px;
+				margin: 0;
+			}
+
+			table.recentcommentsavatartop a, table.recentcommentsavatarend a {
+				border: 0px !important;
+				background-color: transparent !important;
+			}
+
+			td.recentcommentsavatarend, td.recentcommentsavatartop {
+				padding: 0px 0px 1px 0px;
+				margin: 0px;
+			}
+
+			td.recentcommentstextend {
+				border: none !important;
+				padding: 0px 0px 2px 10px;
+			}
+
+			.rtl td.recentcommentstextend {
+				padding: 0px 10px 2px 0px;
+			}
+
+			td.recentcommentstexttop {
+				border: none;
+				padding: 0px 0px 0px 10px;
+			}
+
+			.rtl td.recentcommentstexttop {
+				padding: 0px 10px 0px 0px;
+			}
+		</style>
+		<meta name="application-name" content="Programming Tips and More"><meta name="msapplication-window" content="width=device-width;height=device-height"><meta name="msapplication-tooltip" content="System configuration, programming tools and general matters"><meta name="msapplication-task" content="name=Subscribe;action-uri=https://newseasandbeyond.wordpress.com/feed/;icon-uri=https://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=Sign up for a free blog;action-uri=http://wordpress.com/signup/;icon-uri=https://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=https://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=https://s2.wp.com/i/favicon.ico"><meta name="title" content="How to setup Visual Studio Express to work with OpenGL on&nbsp;Windows | Programming Tips and More on WordPress.com">
+<meta name="description" content="Requirements Visual Studio Express The first thing to do, if you already haven't done, is install the Visual Studio Express software. Probably this tutorial also works for the other versions of Visual Studio, but I only tested it with Express. You can find the links to the installation here. The installation process is quite straightforward,…">
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-image: url("https://s0.wp.com/wp-content/themes/pub/typo/images/body-bg.png"); background-position: left top; background-size: auto; background-repeat: repeat; background-attachment: scroll; }
+</style>
+		<script type="text/javascript">
+		var __ATA_PP = { pt: 1, ht: 0, tn: 'typo', amp: false };
+		var __ATA = __ATA || {};
+		__ATA.cmd = __ATA.cmd || [];
+		__ATA.criteo = __ATA.criteo || {};
+		__ATA.criteo.cmd = __ATA.criteo.cmd || [];
+		</script>
+		<script type="text/javascript" src="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/head.js" async=""></script><link rel="amphtml" href="https://newseasandbeyond.wordpress.com/2014/01/19/how-to-setup-visual-studio-express-to-work-with-opengl-on-windows/amp/"><style type="text/css" id="syntaxhighlighteranchor"></style>
+<script type="text/javascript">
+	window.google_analytics_uacct = "UA-52447-2";
+</script>
+
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-52447-2']);
+	_gaq.push(['_setDomainName', 'wordpress.com']);
+	_gaq.push(['_initData']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+	})();
+</script><script type="text/javascript" async="" src="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/ga.js"></script>
+<script src="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/publishertag.js"></script><style type="text/css"></style><script type="text/javascript" async="" src="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/a_002"></script><link rel="stylesheet" type="text/css" id="gravatar-card-css" href="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/hovercard.css"><link rel="stylesheet" type="text/css" id="gravatar-card-services-css" href="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/services.css"><script type="text/javascript" async="" src="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/a"></script><script type="text/javascript" charset="UTF-8" src="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/publishertag.js"></script></head>
+
+<body class="post-template-default single single-post postid-71 single-format-standard custom-background mp6 customizer-styles-applied highlander-enabled highlander-light">
+<div id="page" class="hfeed site">
+		<header id="masthead" class="site-header" role="banner">
+				<div class="site-branding">
+			<h1 class="site-title"><a href="https://newseasandbeyond.wordpress.com/" rel="home">Programming Tips and More</a></h1>
+			<h2 class="site-description">System configuration, programming tools and general matters</h2>
+		</div>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<h1 class="menu-toggle">Menu</h1>
+			<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+			
+				<div class="menu"><ul class=" nav-menu">
+<li><a href="https://newseasandbeyond.wordpress.com/">Home</a></li><li class="page_item page-item-1"><a href="https://newseasandbeyond.wordpress.com/about/">About</a></li>
+</ul></div>
+
+			
+		</nav><!-- #site-navigation -->
+	</header><!-- #masthead -->
+
+	<div id="content" class="site-content">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		
+			<div class="hentry-wrapper">
+	<article id="post-71" class="post-71 post type-post status-publish format-standard hentry category-c category-c-2 category-configuration-2 category-installation category-tutorial category-windows tag-c-3 tag-c-4 tag-configure tag-express tag-freeglut tag-gl tag-install tag-open tag-opengl tag-setup tag-tutorial-2 tag-visual-studio">
+		<header class="entry-header">
+							<h1 class="entry-title">How to setup Visual Studio Express to work with OpenGL on&nbsp;Windows</h1>			
+			<div class="entry-meta">
+				<span class="posted-on"><a href="https://newseasandbeyond.wordpress.com/2014/01/19/how-to-setup-visual-studio-express-to-work-with-opengl-on-windows/" rel="bookmark"><time class="entry-date published" datetime="2014-01-19T14:45:35+00:00">19/01/2014</time><time class="updated" datetime="2014-01-26T19:49:30+00:00">26/01/2014</time></a></span><span class="byline"><span class="author vcard"><a class="url fn n" href="https://newseasandbeyond.wordpress.com/author/marcelocra/">marcelocra</a></span></span>												<span class="cat-links">
+					<a href="https://newseasandbeyond.wordpress.com/category/c/" rel="category tag">C</a>, <a href="https://newseasandbeyond.wordpress.com/category/c-2/" rel="category tag">C++</a>, <a href="https://newseasandbeyond.wordpress.com/category/configuration-2/" rel="category tag">Configuration</a>, <a href="https://newseasandbeyond.wordpress.com/category/installation/" rel="category tag">Installation</a>, <a href="https://newseasandbeyond.wordpress.com/category/tutorial/" rel="category tag">Tutorial</a>, <a href="https://newseasandbeyond.wordpress.com/category/windows/" rel="category tag">Windows</a>				</span>
+				
+								<span class="tags-links">
+					Tags: <a href="https://newseasandbeyond.wordpress.com/tag/c-3/" rel="tag">c</a>, <a href="https://newseasandbeyond.wordpress.com/tag/c-4/" rel="tag">c++</a>, <a href="https://newseasandbeyond.wordpress.com/tag/configure/" rel="tag">configure</a>, <a href="https://newseasandbeyond.wordpress.com/tag/express/" rel="tag">express</a>, <a href="https://newseasandbeyond.wordpress.com/tag/freeglut/" rel="tag">freeglut</a>, <a href="https://newseasandbeyond.wordpress.com/tag/gl/" rel="tag">gl</a>, <a href="https://newseasandbeyond.wordpress.com/tag/install/" rel="tag">install</a>, <a href="https://newseasandbeyond.wordpress.com/tag/open/" rel="tag">open</a>, <a href="https://newseasandbeyond.wordpress.com/tag/opengl/" rel="tag">opengl</a>, <a href="https://newseasandbeyond.wordpress.com/tag/setup/" rel="tag">setup</a>, <a href="https://newseasandbeyond.wordpress.com/tag/tutorial-2/" rel="tag">tutorial</a>, <a href="https://newseasandbeyond.wordpress.com/tag/visual-studio/" rel="tag">visual studio</a>				</span>
+				
+			</div><!-- .entry-meta -->
+		</header><!-- .entry-header -->
+
+		<div class="entry-content">
+			<h2>Requirements</h2>
+<h4>Visual Studio Express</h4>
+<p>
+The first thing to do, if you already haven’t done, is install the 
+Visual Studio Express software. Probably this tutorial also works for 
+the other versions of Visual Studio, but I only tested it with Express. 
+You can find the links to the installation <a href="http://www.visualstudio.com/products/visual-studio-express-vs">here</a>.
+ The installation process is quite straightforward, so once you are done
+ you can launch the program and proceed to the next part.
+</p>
+<h4>FreeGlut</h4>
+<p>
+Download and extract the Freeglut library from <a href="http://www.transmissionzero.co.uk/software/freeglut-devel/">here</a>. Since we are using Visual Studio, go to the section <b>freeglut 2.8.1 MSVC Package</b>
+ of the website. Remember the location to where you extracted the 
+Freeglut folder, because it will be necessary in the next steps.
+</p>
+<h2>Initializing an OpenGL program</h2>
+<p>
+Open Visual Studio Express and select <b>New Project…</b> from the left part of the startup window. Another window will open (check figure 1) and now you need to select <b>Visual C++</b> (inside Templates which is inside Installed), and then <b>Empty Project</b>. Name it, choose where to save and most importantly be sure to check <b>Create directory for solution</b> (otherwise you folder will become a mess).
+</p>
+<p><a href="https://newseasandbeyond.files.wordpress.com/2014/01/new_project_wizard.jpg"><img data-attachment-id="73" data-permalink="https://newseasandbeyond.wordpress.com/2014/01/19/how-to-setup-visual-studio-express-to-work-with-opengl-on-windows/new_project_wizard/#main" data-orig-file="https://newseasandbeyond.files.wordpress.com/2014/01/new_project_wizard.jpg?w=615&amp;h=373" data-orig-size="947,575" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="new_project_wizard" data-image-description="" data-medium-file="https://newseasandbeyond.files.wordpress.com/2014/01/new_project_wizard.jpg?w=615&amp;h=373?w=300" data-large-file="https://newseasandbeyond.files.wordpress.com/2014/01/new_project_wizard.jpg?w=615&amp;h=373?w=615" src="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/new_project_wizard.jpg" alt="new_project_wizard" class="aligncenter size-full wp-image-73" srcset="https://newseasandbeyond.files.wordpress.com/2014/01/new_project_wizard.jpg?w=615&amp;h=373 615w, https://newseasandbeyond.files.wordpress.com/2014/01/new_project_wizard.jpg?w=150&amp;h=91 150w, https://newseasandbeyond.files.wordpress.com/2014/01/new_project_wizard.jpg?w=300&amp;h=182 300w, https://newseasandbeyond.files.wordpress.com/2014/01/new_project_wizard.jpg?w=768&amp;h=466 768w, https://newseasandbeyond.files.wordpress.com/2014/01/new_project_wizard.jpg 947w" sizes="(max-width: 615px) 100vw, 615px" width="615" height="373">Figure 1</a></p>
+<p>
+Afer the project is created, right click on the name you gave to the project (figure 2) and go to <b>Properties</b>.</p>
+<p><a href="https://newseasandbeyond.files.wordpress.com/2014/01/right_click_solution.jpg"><img data-attachment-id="77" data-permalink="https://newseasandbeyond.wordpress.com/2014/01/19/how-to-setup-visual-studio-express-to-work-with-opengl-on-windows/right_click_solution/#main" data-orig-file="https://newseasandbeyond.files.wordpress.com/2014/01/right_click_solution.jpg?w=615" data-orig-size="464,507" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="right_click_solution" data-image-description="" data-medium-file="https://newseasandbeyond.files.wordpress.com/2014/01/right_click_solution.jpg?w=615?w=275" data-large-file="https://newseasandbeyond.files.wordpress.com/2014/01/right_click_solution.jpg?w=615?w=464" src="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/right_click_solution.jpg" alt="right_click_solution" class="aligncenter size-full wp-image-77" srcset="https://newseasandbeyond.files.wordpress.com/2014/01/right_click_solution.jpg 464w, https://newseasandbeyond.files.wordpress.com/2014/01/right_click_solution.jpg?w=137 137w, https://newseasandbeyond.files.wordpress.com/2014/01/right_click_solution.jpg?w=275 275w" sizes="(max-width: 464px) 100vw, 464px">Figure 2</a></p>
+<p>A new window will appear with a lot of options. I’ll list what you need to do in this window:</p>
+<ul>
+<li>
+In the <b>Configuration Properties</b>, go to <b>VC++ Directories</b>. You will see a lot of directories names. Click on <b>Include Directories</b>, then on the dropdow arrow that appears to the right and then on <b>Edit…</b>.
+ In the new window, select the new folder icon (which says ‘New line’ if
+ you hover with the mouse) and in the new line that appears, click on 
+the <b>…</b> (three dots by the end of the line). You will get a new 
+window to select the folder where your include files are located. Now go
+ to the <b>freeglut</b> folder you extracted in the beginning of the tutorial and select the <b>include</b> folder inside that folder. </li>
+<li>
+Still on <b>VC++ Directories</b>, click on <b>Library Directories</b> and do the same as before, but now select the <b>lib</b> folder inside of the <b>freeglut</b> folder.
+</li>
+<li>
+Now open the <b>Configuration Properties</b> sub-item <b>Linker</b> and then click on <b>Input</b>. Click on <b>Additional Dependencies</b> and again on the dropdown arrow and <b>Edit…</b>. It will appear a new window, but in this one you will just type <b>opengl32.lib</b> and click <b>Ok</b>. After this you can click <b>Ok</b> and that should close the <b>Properties</b> window.
+</li>
+<p></p>
+</ul>
+<p>
+You now have your visual studio configured and you need to test it. Right click on <b>Source Files</b> inside your solution folders and go to <b>Add</b> and then <b>New Item…</b>. Choose a <b>C++ File</b>, give it a name and then click <b>Add</b>.
+ Copy paste the code below there and run. This code is a robot arm that 
+you can move with ‘s’ and ‘e’ keyboard keys. You can find this code and a
+ lot more on the <a href="http://glprogramming.com/red/">Red Book</a>, a great OpenGL programming guide for those who don’t know OpenGL.</p>
+<pre><code>
+#include &lt;GL/glut.h&gt;
+
+static int shoulder = 0, elbow = 0;
+
+void init(void)
+{
+	glClearColor(0.0, 0.0, 0.0, 0.0);
+	glShadeModel(GL_FLAT);
+}
+
+void display(void)
+{
+	glClear(GL_COLOR_BUFFER_BIT);
+	glPushMatrix();
+	glTranslatef(-1.0, 0.0, 0.0);
+	glRotatef((GLfloat)shoulder, 0.0, 0.0, 1.0);
+	glTranslatef(1.0, 0.0, 0.0);
+	glPushMatrix();
+	glScalef(2.0, 0.4, 1.0);
+	glutWireCube(1.0);
+	glPopMatrix();
+
+	glTranslatef(1.0, 0.0, 0.0);
+	glRotatef((GLfloat)elbow, 0.0, 0.0, 1.0);
+	glTranslatef(1.0, 0.0, 0.0);
+	glPushMatrix();
+	glScalef(2.0, 0.4, 1.0);
+	glutWireCube(1.0);
+	glPopMatrix();
+
+	glPopMatrix();
+	glutSwapBuffers();
+}
+
+void reshape(int w, int h)
+{
+	glViewport(0, 0, (GLsizei)w, (GLsizei)h);
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+	gluPerspective(65.0, (GLfloat)w / (GLfloat)h, 1.0, 20.0);
+	glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
+	glTranslatef(0.0, 0.0, -5.0);
+}
+
+void keyboard(unsigned char key, int x, int y)
+{
+	switch (key) {
+		case 's':   /*  s key rotates at shoulder  */
+			shoulder = (shoulder + 5) % 360;
+			glutPostRedisplay();
+			break;
+		case 'S':
+			shoulder = (shoulder - 5) % 360;
+			glutPostRedisplay();
+			break;
+		case 'e':  /*  e key rotates at elbow  */
+			elbow = (elbow + 5) % 360;
+			glutPostRedisplay();
+			break;
+		case 'E':
+			elbow = (elbow - 5) % 360;
+			glutPostRedisplay();
+			break;
+		default:
+			break;
+	}
+}
+
+int main(int argc, char** argv)
+{
+	glutInit(&amp;argc, argv);
+	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
+	glutInitWindowSize(500, 500);
+	glutInitWindowPosition(100, 100);
+	glutCreateWindow(argv[0]);
+	init();
+	glutDisplayFunc(display);
+	glutReshapeFunc(reshape);
+	glutKeyboardFunc(keyboard);
+	glutMainLoop();
+	return 0;
+}
+</code></pre>
+<p></p>
+<p>
+With this we end the tutorial. It took me a long time until I could make
+ OpenGL run, specially because I tried before with other IDEs, like Dev,
+ and it simply didn’t work. I hope you can run it with this 
+instructions. See you later!</p>
+		<div class="wpcnt">
+			<div class="wpa wpmrec" style="display: inline-block !important;">
+				<span class="wpa-about">Advertisements</span>
+				<div class="u">		<div style="padding-bottom:15px;width:300px;height:250px;float:left;margin-right:5px;margin-top:0px">
+		<div id="atatags-26942" style="overflow: hidden; position: relative; width: auto; height: auto;"><div style="width: 300px; height: 250px;"><iframe scrolling="no" style="border:none;overflow:hidden;width:300px;height:250px;" width="300" height="250" frameborder="0"></iframe><iframe scrolling="no" style="width:0px;height:0px;border:none;" tabindex="-1" width="300" height="250" frameborder="0"></iframe><iframe scrolling="no" style="width:0px;height:0px;border:none;" tabindex="-1" width="300" height="250" frameborder="0"></iframe><iframe scrolling="no" style="width:0px;height:0px;border:none;" tabindex="-1" width="300" height="250" frameborder="0"></iframe><iframe scrolling="no" style="width:0px;height:0px;border:none;" tabindex="-1" width="300" height="250" frameborder="0"></iframe><iframe scrolling="no" style="width:0px;height:0px;border:none;" tabindex="-1" width="300" height="250" frameborder="0"></iframe></div></div></div>		<div style="padding-bottom:15px;width:300px;height:250px;float:left;margin-top:0px">
+		<div id="atatags-114160" style="overflow: hidden; position: relative; width: auto; height: auto;"><div style="width: 300px; height: 250px;"><iframe scrolling="no" style="border:none;overflow:hidden;width:300px;height:250px;" width="300" height="250" frameborder="0"></iframe><iframe scrolling="no" style="width:0px;height:0px;border:none;" tabindex="-1" width="300" height="250" frameborder="0"></iframe><iframe scrolling="no" style="width:0px;height:0px;border:none;" tabindex="-1" width="300" height="250" frameborder="0"></iframe><iframe scrolling="no" style="width:0px;height:0px;border:none;" tabindex="-1" width="300" height="250" frameborder="0"></iframe><iframe scrolling="no" style="width:0px;height:0px;border:none;" tabindex="-1" width="300" height="250" frameborder="0"></iframe><iframe scrolling="no" style="width:0px;height:0px;border:none;" tabindex="-1" width="300" height="250" frameborder="0"></iframe></div></div></div></div>
+						<div id="crt-185831094" style="width: 300px; height: 250px; display: none !important;"></div>
+		<script type="text/javascript">
+(function(){var c=function(){var a=document.getElementById("crt-185831094");window.Criteo?(a.parentNode.style.setProperty("display","inline-block","important"),a.style.setProperty("display","block","important"),window.Criteo.DisplayAcceptableAdIfAdblocked({zoneid:388248,containerid:"crt-185831094",collapseContainerIfNotAdblocked:!0,callifnotadblocked:function(){a.style.setProperty("display","none","important");a.style.setProperty("visbility","hidden","important")}})):(a.style.setProperty("display","none","important"),a.style.setProperty("visibility","hidden","important"))};if(window.Criteo)c();else{if(!__ATA.criteo.script){var b=document.createElement("script");b.src="//static.criteo.net/js/ld/publishertag.js";b.onload=function(){for(var a=0;a<__ATA.criteo.cmd.length;a++){var b=__ATA.criteo.cmd[a];"function"===typeof b&&b()}};(document.head||document.getElementsByTagName("head")[0]).appendChild(b);__ATA.criteo.script=b}__ATA.criteo.cmd.push(c)}})();
+		</script>		<div id="crt-389108068" style="width: 300px; height: 250px; display: none !important;"></div>
+		<script type="text/javascript">
+(function(){var c=function(){var a=document.getElementById("crt-389108068");window.Criteo?(a.parentNode.style.setProperty("display","inline-block","important"),a.style.setProperty("display","block","important"),window.Criteo.DisplayAcceptableAdIfAdblocked({zoneid:837497,containerid:"crt-389108068",collapseContainerIfNotAdblocked:!0,callifnotadblocked:function(){a.style.setProperty("display","none","important");a.style.setProperty("visbility","hidden","important")}})):(a.style.setProperty("display","none","important"),a.style.setProperty("visibility","hidden","important"))};if(window.Criteo)c();else{if(!__ATA.criteo.script){var b=document.createElement("script");b.src="//static.criteo.net/js/ld/publishertag.js";b.onload=function(){for(var a=0;a<__ATA.criteo.cmd.length;a++){var b=__ATA.criteo.cmd[a];"function"===typeof b&&b()}};(document.head||document.getElementsByTagName("head")[0]).appendChild(b);__ATA.criteo.script=b}__ATA.criteo.cmd.push(c)}})();
+		</script>
+			</div>
+		</div><div id="jp-post-flair" class="sharedaddy sd-like-enabled sd-sharing-enabled"><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-twitter"><a rel="nofollow" data-shared="sharing-twitter-71" class="share-twitter sd-button share-icon" href="https://newseasandbeyond.wordpress.com/2014/01/19/how-to-setup-visual-studio-express-to-work-with-opengl-on-windows/?share=twitter&amp;nb=1" target="_blank" title="Click to share on Twitter"><span>Twitter</span></a></li><li class="share-facebook"><a rel="nofollow" data-shared="sharing-facebook-71" class="share-facebook sd-button share-icon" href="https://newseasandbeyond.wordpress.com/2014/01/19/how-to-setup-visual-studio-express-to-work-with-opengl-on-windows/?share=facebook&amp;nb=1" target="_blank" title="Share on Facebook"><span>Facebook</span></a></li><li class="share-end"></li></ul></div></div></div><div class="sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-loaded" id="like-post-wrapper-52761869-71-5a374fd362b07" data-src="//widgets.wp.com/likes/#blog_id=52761869&amp;post_id=71&amp;origin=newseasandbeyond.wordpress.com&amp;obj_id=52761869-71-5a374fd362b07" data-name="like-post-frame-52761869-71-5a374fd362b07"><h3 class="sd-title">Like this:</h3><div class="likes-widget-placeholder post-likes-widget-placeholder" style="height: 55px; display: none;"><span class="button"><span>Like</span></span> <span class="loading">Loading...</span></div><iframe class="post-likes-widget jetpack-likes-widget" name="like-post-frame-52761869-71-5a374fd362b07" src="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/a_013.htm" width="100%" height="55px" frameborder="0"></iframe><span class="sd-text-color"></span><a class="sd-link-color"></a></div>
+<div id="jp-relatedposts" class="jp-relatedposts" style="display: block;">
+	<h3 class="jp-relatedposts-headline"><em>Related</em></h3>
+<div class="jp-relatedposts-items jp-relatedposts-items-minimal"><p class="jp-relatedposts-post jp-relatedposts-post0" data-post-id="65" data-post-format="false"><span class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="https://newseasandbeyond.wordpress.com/2014/01/12/how-to-setup-and-use-virtualenv-with-windows/" title="How to setup and use virtualenv with Windows
+
+This is a very brief explanation of this tool. There are lots of resources available and I will link to this&nbsp;Stackoverflow post, since it contains several different tutorial on Virtualenv. What is Virtualenv? Virtualenv is a simple tool that allows you to create a fully functioning Python virtual environment for…" rel="nofollow" data-origin="71" data-position="0">How to setup and use virtualenv with Windows</a></span><span class="jp-relatedposts-post-context">In "Installation"</span></p><p class="jp-relatedposts-post jp-relatedposts-post1" data-post-id="42" data-post-format="false"><span class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="https://newseasandbeyond.wordpress.com/2013/07/11/installing-sublime-text-2-on-debian/" title="Installing Sublime Text 2 on Debian
+
+Go to Sublime Text 2 website and download the latest release. After that, open a terminal window and go to the folder where you put it. Now you need to do a series of steps as follows: tar -xvjf Sublime\ Text\ 2.0.1\ x64.tar.bz2 sudo mv Sublime\ Text\ 2/ /opt/sublime-text-2/ sudo…" rel="nofollow" data-origin="71" data-position="1">Installing Sublime Text 2 on Debian</a></span><span class="jp-relatedposts-post-context">In "Debian"</span></p><p class="jp-relatedposts-post jp-relatedposts-post2" data-post-id="2" data-post-format="false"><span class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="https://newseasandbeyond.wordpress.com/2013/05/25/debian-initial-configuration/" title="Debian initial configuration
+
+After installing Debian operating system (Gnome Desktop Environment) to your notebook you need to add yourself as sudo, in order to be able to execute administrative tasks without the need to log as root. To do that, open one root terminal window (or log as root with the command su)…" rel="nofollow" data-origin="71" data-position="2">Debian initial configuration</a></span><span class="jp-relatedposts-post-context">In "Configuration"</span></p></div></div></div>					</div><!-- .entry-content -->
+
+		<footer class="entry-meta">
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-## -->
+</div><!-- .hentry-wrapper -->
+
+				<nav role="navigation" id="nav-below" class="post-navigation">
+		<h1 class="screen-reader-text">Post navigation</h1>
+
+	
+		<div class="nav-previous"><a href="https://newseasandbeyond.wordpress.com/2014/01/12/how-to-setup-and-use-virtualenv-with-windows/" rel="prev"><span class="meta-nav">←</span> How to setup and use virtualenv with&nbsp;Windows</a></div>		<div class="nav-next"><a href="https://newseasandbeyond.wordpress.com/2014/01/27/creating-in-memory-zip-file-with-python/" rel="next">Creating in memory zip file with&nbsp;Python <span class="meta-nav">→</span></a></div>
+	
+	</nav><!-- #nav-below -->
+	
+			
+<div id="comments" class="comments-area">
+
+	
+			<h2 class="comments-title">
+			8 thoughts on “<span>How to setup Visual Studio Express to work with OpenGL on&nbsp;Windows</span>”		</h2>
+
+		
+		<ol class="comment-list">
+			
+	<li id="comment-6" class="comment even thread-even depth-1 parent highlander-comment">
+		<article id="div-comment-6" class="comment-body clear">
+			<div class="comment-content">
+				<p>This post is very amazing . But there is a problem in running the
+ program in visual studio 2012. The Problem is when i run the program it
+ shows an error message “can’t start because <span class="skimlinks-unlinked">freeglut.dll</span> is missing” Can you help me to solve this problem . I have every thing is working correctly and no syntax errors.</p>
+				<div class="reply clear"><a rel="nofollow" class="comment-reply-link" href="https://newseasandbeyond.wordpress.com/2014/01/19/how-to-setup-visual-studio-express-to-work-with-opengl-on-windows/?replytocom=6#respond" onclick='return addComment.moveForm( "div-comment-6", "6", "respond", "71" )' aria-label="Reply to Muzamil">Reply</a></div>			</div><!-- .comment-content -->
+			<footer class="comment-meta">
+				<img alt="" src="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/d433a9791010f70670dd9c10ddc7f6a7.png" class="avatar avatar-32 grav-hashed grav-hijack" originals="32" src-orig="https://1.gravatar.com/avatar/d433a9791010f70670dd9c10ddc7f6a7?s=32&amp;d=identicon&amp;r=G" scale="1.5" id="grav-d433a9791010f70670dd9c10ddc7f6a7-0" width="32" height="32">
+				<div class="comment-metadata">
+					<div class="comment-author vcard">
+						<cite class="fn">Muzamil</cite>					</div><!-- .comment-author -->
+					<a href="https://newseasandbeyond.wordpress.com/2014/01/19/how-to-setup-visual-studio-express-to-work-with-opengl-on-windows/#comment-6">
+						<time datetime="2014-02-11T18:35:24+00:00">
+							11/02/2014 at 18:35						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+		</article><!-- .comment-body -->
+
+	<ul class="children">
+
+	<li id="comment-7" class="comment byuser comment-author-marcelocra bypostauthor odd alt depth-2 parent highlander-comment">
+		<article id="div-comment-7" class="comment-body clear">
+			<div class="comment-content">
+				<p>Are you sure you have downloaded the right package? Because if I 
+am not mistaken I had that problem when I tried to use the Mingw version
+ of freeglut with VisualStudio. Go to <a href="http://www.transmissionzero.co.uk/software/freeglut-devel/" rel="nofollow">http://www.transmissionzero.co.uk/software/freeglut-devel/</a> and make sure to download the MSVC version of the library.</p>
+<p>Thank you for the comment.<br>
+Regards!</p>
+				<div class="reply clear"><a rel="nofollow" class="comment-reply-link" href="https://newseasandbeyond.wordpress.com/2014/01/19/how-to-setup-visual-studio-express-to-work-with-opengl-on-windows/?replytocom=7#respond" onclick='return addComment.moveForm( "div-comment-7", "7", "respond", "71" )' aria-label="Reply to marcelocra">Reply</a></div>			</div><!-- .comment-content -->
+			<footer class="comment-meta">
+				<img alt="" src="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/b351d04a7750d1fed613c3e1713cded6.png" class="avatar avatar-32 grav-hashed grav-hijack" originals="32" src-orig="https://2.gravatar.com/avatar/b351d04a7750d1fed613c3e1713cded6?s=32&amp;d=identicon&amp;r=G" scale="1.5" id="grav-b351d04a7750d1fed613c3e1713cded6-0" width="32" height="32">
+				<div class="comment-metadata">
+					<div class="comment-author vcard">
+						<cite class="fn"><a href="https://newseasandbeyond.wordpress.com/" rel="external nofollow" class="url">marcelocra</a></cite>					</div><!-- .comment-author -->
+					<a href="https://newseasandbeyond.wordpress.com/2014/01/19/how-to-setup-visual-studio-express-to-work-with-opengl-on-windows/#comment-7">
+						<time datetime="2014-02-21T12:51:30+00:00">
+							21/02/2014 at 12:51						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+		</article><!-- .comment-body -->
+
+	<ul class="children">
+
+	<li id="comment-12" class="comment even depth-3 highlander-comment">
+		<article id="div-comment-12" class="comment-body clear">
+			<div class="comment-content">
+				<p>I’m having the same problem as Muzamil, but I’m absolutely sure 
+I’m using the MSVC version of the library. Everything seems to be 
+working fine save for that .dll being missing. Is there a step I might 
+be missing?</p>
+							</div><!-- .comment-content -->
+			<footer class="comment-meta">
+				<img alt="" src="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/b25be444a428e028269221686a7889e7.png" class="avatar avatar-32 grav-hashed grav-hijack" originals="32" src-orig="https://2.gravatar.com/avatar/b25be444a428e028269221686a7889e7?s=32&amp;d=identicon&amp;r=G" scale="1.5" id="grav-b25be444a428e028269221686a7889e7-0" width="32" height="32">
+				<div class="comment-metadata">
+					<div class="comment-author vcard">
+						<cite class="fn">Benedict</cite>					</div><!-- .comment-author -->
+					<a href="https://newseasandbeyond.wordpress.com/2014/01/19/how-to-setup-visual-studio-express-to-work-with-opengl-on-windows/#comment-12">
+						<time datetime="2014-08-20T16:16:29+00:00">
+							20/08/2014 at 16:16						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li id="comment-18" class="comment byuser comment-author-marcelocra bypostauthor odd alt thread-odd thread-alt depth-1 highlander-comment">
+		<article id="div-comment-18" class="comment-body clear">
+			<div class="comment-content">
+				<p>I couldn’t reproduce the problem you guys had. Right now I 
+followed the post instructions and could compile and run the ‘robot arm’
+ program without any problem. Note: right now I tested with Visual C++ 
+2010 Express. If I recall correctly, when I first post this I tested 
+with the 2013 version as well.</p>
+				<div class="reply clear"><a rel="nofollow" class="comment-reply-link" href="https://newseasandbeyond.wordpress.com/2014/01/19/how-to-setup-visual-studio-express-to-work-with-opengl-on-windows/?replytocom=18#respond" onclick='return addComment.moveForm( "div-comment-18", "18", "respond", "71" )' aria-label="Reply to marcelocra">Reply</a></div>			</div><!-- .comment-content -->
+			<footer class="comment-meta">
+				<img alt="" src="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/b351d04a7750d1fed613c3e1713cded6.png" class="avatar avatar-32 grav-hashed grav-hijack" originals="32" src-orig="https://2.gravatar.com/avatar/b351d04a7750d1fed613c3e1713cded6?s=32&amp;d=identicon&amp;r=G" scale="1.5" id="grav-b351d04a7750d1fed613c3e1713cded6-1" width="32" height="32">
+				<div class="comment-metadata">
+					<div class="comment-author vcard">
+						<cite class="fn"><a href="https://newseasandbeyond.wordpress.com/" rel="external nofollow" class="url">marcelocra</a></cite>					</div><!-- .comment-author -->
+					<a href="https://newseasandbeyond.wordpress.com/2014/01/19/how-to-setup-visual-studio-express-to-work-with-opengl-on-windows/#comment-18">
+						<time datetime="2014-11-01T17:32:51+00:00">
+							01/11/2014 at 17:32						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-19" class="comment byuser comment-author-marcelocra bypostauthor even thread-even depth-1 highlander-comment">
+		<article id="div-comment-19" class="comment-body clear">
+			<div class="comment-content">
+				<p>Actually, I think I found the problem. You need to place the location of your <span class="skimlinks-unlinked">freeglut.dll</span>
+ in your system path. You go to the start menu and type ‘environ’. Then 
+click on ‘Edit system environment variables’, go to the ‘Path’ variable 
+(in the window to the bottom) and add something like ‘C:\freeglut\bin’ 
+or ‘C:\freeglut\bin\x64’ depending on which dll you intend to use. This 
+should solve the problem.</p>
+				<div class="reply clear"><a rel="nofollow" class="comment-reply-link" href="https://newseasandbeyond.wordpress.com/2014/01/19/how-to-setup-visual-studio-express-to-work-with-opengl-on-windows/?replytocom=19#respond" onclick='return addComment.moveForm( "div-comment-19", "19", "respond", "71" )' aria-label="Reply to marcelocra">Reply</a></div>			</div><!-- .comment-content -->
+			<footer class="comment-meta">
+				<img alt="" src="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/b351d04a7750d1fed613c3e1713cded6.png" class="avatar avatar-32 grav-hashed grav-hijack" originals="32" src-orig="https://2.gravatar.com/avatar/b351d04a7750d1fed613c3e1713cded6?s=32&amp;d=identicon&amp;r=G" scale="1.5" id="grav-b351d04a7750d1fed613c3e1713cded6-2" width="32" height="32">
+				<div class="comment-metadata">
+					<div class="comment-author vcard">
+						<cite class="fn"><a href="https://newseasandbeyond.wordpress.com/" rel="external nofollow" class="url">marcelocra</a></cite>					</div><!-- .comment-author -->
+					<a href="https://newseasandbeyond.wordpress.com/2014/01/19/how-to-setup-visual-studio-express-to-work-with-opengl-on-windows/#comment-19">
+						<time datetime="2014-11-14T23:48:26+00:00">
+							14/11/2014 at 23:48						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-21" class="comment odd alt thread-odd thread-alt depth-1 highlander-comment">
+		<article id="div-comment-21" class="comment-body clear">
+			<div class="comment-content">
+				<p>Great article – thanks so much</p>
+				<div class="reply clear"><a rel="nofollow" class="comment-reply-link" href="https://newseasandbeyond.wordpress.com/2014/01/19/how-to-setup-visual-studio-express-to-work-with-opengl-on-windows/?replytocom=21#respond" onclick='return addComment.moveForm( "div-comment-21", "21", "respond", "71" )' aria-label="Reply to JohnR">Reply</a></div>			</div><!-- .comment-content -->
+			<footer class="comment-meta">
+				<img alt="" src="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/88d46b8b484b624876e2d0d3f8e39296.png" class="avatar avatar-32 grav-hashed grav-hijack" originals="32" src-orig="https://2.gravatar.com/avatar/88d46b8b484b624876e2d0d3f8e39296?s=32&amp;d=identicon&amp;r=G" scale="1.5" id="grav-88d46b8b484b624876e2d0d3f8e39296-0" width="32" height="32">
+				<div class="comment-metadata">
+					<div class="comment-author vcard">
+						<cite class="fn">JohnR</cite>					</div><!-- .comment-author -->
+					<a href="https://newseasandbeyond.wordpress.com/2014/01/19/how-to-setup-visual-studio-express-to-work-with-opengl-on-windows/#comment-21">
+						<time datetime="2014-12-03T18:48:30+00:00">
+							03/12/2014 at 18:48						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-22" class="comment even thread-even depth-1 highlander-comment">
+		<article id="div-comment-22" class="comment-body clear">
+			<div class="comment-content">
+				<p><span class="skimlinks-unlinked">freeglut.dll</span> missing is not actually a big <span class="skimlinks-unlinked">problem.It</span> can be resolved if easily by following the given steps:<br>
+1) open the <span class="skimlinks-unlinked">freeglutMSVC.zip</span> you have downloaded.<br>
+2) open the bin folder inside the ZIP.<br>
+3) Here you will find  x64 folder and a <span class="skimlinks-unlinked">freeglut.dll</span>
+ file actually you have to put this file in your project. for example if
+ u use visual studio and make a new project say ABC on desktop you have 
+to put this dll file in C:\desktop\ABC\ABC<br>
+at this second ABC folder where your source file is present you will put it in that.</p>
+				<div class="reply clear"><a rel="nofollow" class="comment-reply-link" href="https://newseasandbeyond.wordpress.com/2014/01/19/how-to-setup-visual-studio-express-to-work-with-opengl-on-windows/?replytocom=22#respond" onclick='return addComment.moveForm( "div-comment-22", "22", "respond", "71" )' aria-label="Reply to taimoor">Reply</a></div>			</div><!-- .comment-content -->
+			<footer class="comment-meta">
+				<img alt="" src="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/f4bb0a5f78e27199be26787a75ccc15e.png" class="avatar avatar-32 grav-hashed grav-hijack" originals="32" src-orig="https://0.gravatar.com/avatar/f4bb0a5f78e27199be26787a75ccc15e?s=32&amp;d=identicon&amp;r=G" scale="1.5" id="grav-f4bb0a5f78e27199be26787a75ccc15e-0" width="32" height="32">
+				<div class="comment-metadata">
+					<div class="comment-author vcard">
+						<cite class="fn">taimoor</cite>					</div><!-- .comment-author -->
+					<a href="https://newseasandbeyond.wordpress.com/2014/01/19/how-to-setup-visual-studio-express-to-work-with-opengl-on-windows/#comment-22">
+						<time datetime="2014-12-13T20:30:30+00:00">
+							13/12/2014 at 20:30						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-47" class="comment odd alt thread-odd thread-alt depth-1 highlander-comment">
+		<article id="div-comment-47" class="comment-body clear">
+			<div class="comment-content">
+				<p>I solved the above  problem by copying <span class="skimlinks-unlinked">freeglut.dll</span> to C:\Windows\System32</p>
+				<div class="reply clear"><a rel="nofollow" class="comment-reply-link" href="https://newseasandbeyond.wordpress.com/2014/01/19/how-to-setup-visual-studio-express-to-work-with-opengl-on-windows/?replytocom=47#respond" onclick='return addComment.moveForm( "div-comment-47", "47", "respond", "71" )' aria-label="Reply to Raheel Kamran">Reply</a></div>			</div><!-- .comment-content -->
+			<footer class="comment-meta">
+				<img alt="" src="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/picture_003.jpg" class="avatar avatar-32" srcset="https://i2.wp.com/graph.facebook.com/v2.2/100002187469615/picture?q=type%3Dlarge%26_md5%3D44123cf145189f62e4fb6f27eeb33f2c&amp;resize=32%2C32&amp;zoom=2 1.5x" scale="1.5" width="32" height="32">
+				<div class="comment-metadata">
+					<div class="comment-author vcard">
+						<cite class="fn"><a href="http://www.facebook.com/100002187469615" rel="external nofollow" class="url">Raheel Kamran</a></cite>					</div><!-- .comment-author -->
+					<a href="https://newseasandbeyond.wordpress.com/2014/01/19/how-to-setup-visual-studio-express-to-work-with-opengl-on-windows/#comment-47">
+						<time datetime="2015-08-20T05:47:09+00:00">
+							20/08/2015 at 05:47						</time>
+					</a>
+									</div><!-- .comment-metadata -->
+
+							</footer><!-- .comment-meta -->
+
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+		</ol><!-- .comment-list -->
+
+		
+	
+	
+		<div id="respond" class="comment-respond js">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://newseasandbeyond.wordpress.com/2014/01/19/how-to-setup-visual-studio-express-to-work-with-opengl-on-windows/#respond" style="display:none;">Cancel reply</a></small></h3>			<form action="https://newseasandbeyond.wordpress.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+				<input id="highlander_comment_nonce" name="highlander_comment_nonce" value="760e4f4dce" type="hidden"><input name="_wp_http_referer" value="/2014/01/19/how-to-setup-visual-studio-express-to-work-with-opengl-on-windows/" type="hidden">
+<input name="hc_post_as" id="hc_post_as" value="guest" type="hidden">
+
+<div class="comment-form-field comment-textarea">
+	
+	<div id="comment-form-comment"><textarea tabindex="-1" style="position: absolute; top: -999px; left: 0px; right: auto; bottom: auto; border: 0px none; padding: 0px; box-sizing: content-box; overflow-wrap: break-word; height: 0px !important; min-height: 0px !important; overflow: hidden; transition: none 0s ease 0s; font-family: Arial, Helvetica, Tahoma, Verdana, sans-serif; font-size: 14px; font-weight: 400; font-style: normal; letter-spacing: 0px; text-transform: none; text-decoration: none; word-spacing: 0px; text-indent: 0px; line-height: 22.4px; width: 593.667px;" class="autosizejs ">Enter your comment here...</textarea><textarea id="comment" name="comment" title="Enter your comment here..." placeholder="Enter your comment here..." style="height: 43px; overflow: hidden; overflow-wrap: break-word; resize: none;"></textarea></div>
+</div>
+
+<div id="comment-form-identity" style="display: none;">
+
+	<div id="comment-form-nascar">
+		<p>Fill in your details below or click an icon to log in:</p>
+		<ul>
+			<li class="selected" style="display:none;">
+				<a href="#comment-form-guest" id="postas-guest" title="Guest">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:WordPress.com" id="postas-wordpress" title="WordPress.com">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:Twitter" id="postas-twitter" title="Twitter">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:Facebook" id="postas-facebook" title="Facebook">
+					<span></span>
+				</a>
+			</li>
+			<li>
+			<iframe id="googleplus-sign-in" name="googleplus-sign-in" src="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/a_014.htm" scrolling="no" allowtransparency="true" seamless="seamless" width="24" height="24" frameborder="0"></iframe>
+			</li>
+		</ul>
+	</div>
+
+	<div id="comment-form-guest" class="comment-form-service selected">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+<a href="https://gravatar.com/site/signup/" target="_blank">				<img src="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/ad516503a11cd5ca435acc9bb6523536_002.png" alt="Gravatar" class="no-grav" originals="25" src-orig="https://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25&amp;d=identicon&amp;forcedefault=y&amp;r=G" scale="1.5" width="25">
+</a>			</div>
+
+				<div class="comment-form-fields">
+				<div class="comment-form-field comment-form-email">
+					<label for="email">Email <span class="required">(required)</span> <span class="nopublish">(Address never made public)</span></label>
+					<div class="comment-form-input"><input id="email" name="email" type="email"></div>
+				</div>
+				<div class="comment-form-field comment-form-author">
+					<label for="author">Name <span class="required">(required)</span></label>
+					<div class="comment-form-input"><input id="author" name="author" type="text"></div>
+				</div>
+				<div class="comment-form-field comment-form-url">
+					<label for="url">Website</label>
+					<div class="comment-form-input"><input id="url" name="url" type="url"></div>
+				</div>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-wordpress" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/ad516503a11cd5ca435acc9bb6523536.png" alt="WordPress.com Logo" class="no-grav" originals="25" scale="1.5" width="25">
+			</div>
+
+				<div class="comment-form-fields">
+				<input name="wp_avatar" id="wordpress-avatar" class="comment-meta-wordpress" value="" type="hidden">
+				<input name="wp_user_id" id="wordpress-user_id" class="comment-meta-wordpress" value="" type="hidden">
+				<input name="wp_access_token" id="wordpress-access_token" class="comment-meta-wordpress" value="" type="hidden">
+				<p class="comment-form-posting-as pa-wordpress"><strong></strong> You are commenting using your <span class="skimlinks-unlinked">WordPress.com</span> account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout(%20'wordpress'%20);">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-twitter" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/ad516503a11cd5ca435acc9bb6523536.png" alt="Twitter picture" class="no-grav" originals="25" scale="1.5" width="25">
+			</div>
+
+				<div class="comment-form-fields">
+				<input name="twitter_avatar" id="twitter-avatar" class="comment-meta-twitter" value="" type="hidden">
+				<input name="twitter_user_id" id="twitter-user_id" class="comment-meta-twitter" value="" type="hidden">
+				<input name="twitter_access_token" id="twitter-access_token" class="comment-meta-twitter" value="" type="hidden">
+				<p class="comment-form-posting-as pa-twitter"><strong></strong> You are commenting using your Twitter account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout(%20'twitter'%20);">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-facebook" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/ad516503a11cd5ca435acc9bb6523536.png" alt="Facebook photo" class="no-grav" originals="25" scale="1.5" width="25">
+			</div>
+
+				<div class="comment-form-fields">
+				<input name="fb_avatar" id="facebook-avatar" class="comment-meta-facebook" value="" type="hidden">
+				<input name="fb_user_id" id="facebook-user_id" class="comment-meta-facebook" value="" type="hidden">
+				<input name="fb_access_token" id="facebook-access_token" class="comment-meta-facebook" value="" type="hidden">
+				<p class="comment-form-posting-as pa-facebook"><strong></strong> You are commenting using your Facebook account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout(%20'facebook'%20);">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-googleplus" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/ad516503a11cd5ca435acc9bb6523536.png" alt="Google+ photo" class="no-grav" originals="25" scale="1.5" width="25">
+			</div>
+
+				<div class="comment-form-fields">
+				<input name="googleplus_avatar" id="googleplus-avatar" class="comment-meta-googleplus" value="" type="hidden">
+				<input name="googleplus_user_id" id="googleplus-user_id" class="comment-meta-googleplus" value="" type="hidden">
+				<input name="googleplus_access_token" id="googleplus-access_token" class="comment-meta-googleplus" value="" type="hidden">
+				<p class="comment-form-posting-as pa-googleplus"><strong></strong> You are commenting using your Google+ account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout(%20'googleplus'%20);">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+
+	<div id="comment-form-load-service" class="comment-form-service">
+		<div class="comment-form-posting-as-cancel"><a href="javascript:HighlanderComments.cancelExternalWindow();">Cancel</a></div>
+		<p>Connecting to %s</p>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+var highlander_expando_javascript = function(){
+	var input = document.createElement( 'input' ),
+	    comment = jQuery( '#comment' );
+
+	if ( 'placeholder' in input ) {
+		comment.attr( 'placeholder', jQuery( '.comment-textarea label' ).remove().text() );
+	}
+
+	// Expando Mode: start small, then auto-resize on first click + text length
+	jQuery( '#comment-form-identity' ).hide();
+	jQuery( '#comment-form-subscribe' ).hide();
+	jQuery( '#commentform .form-submit' ).hide();
+
+	comment.css( { 'height':'10px' } ).one( 'focus', function() {
+		var timer = setInterval( HighlanderComments.resizeCallback, 10 )
+		jQuery( this ).animate( { 'height': HighlanderComments.initialHeight } ).delay( 100 ).queue( function(n) { clearInterval( timer ); HighlanderComments.resizeCallback(); n(); } );
+		jQuery( '#comment-form-identity' ).slideDown();
+		jQuery( '#comment-form-subscribe' ).slideDown();
+		jQuery( '#commentform .form-submit' ).slideDown();
+	});
+}
+jQuery(document).ready( highlander_expando_javascript );
+</script>
+
+<div id="comment-form-subscribe" style="display: none;">
+	<p class="comment-subscription-form"><input name="subscribe" id="subscribe" value="subscribe" style="width: auto;" type="checkbox"> <label class="subscribe-label" id="subscribe-label" for="subscribe" style="display: inline;">Notify me of new comments via email.</label></p></div>
+
+
+
+
+<p class="form-submit" style="display: none;"><input name="submit" id="comment-submit" class="submit" value="Post Comment" type="submit"> <input name="comment_post_ID" value="71" id="comment_post_ID" type="hidden">
+<input name="comment_parent" id="comment_parent" value="0" type="hidden">
+</p><p style="display: none;"><input id="akismet_comment_nonce" name="akismet_comment_nonce" value="ac3d700d0f" type="hidden"></p>
+<input name="genseq" value="1513574355" type="hidden">
+<p style="display: none;"></p>			<input id="ak_js" name="ak_js" value="1513574358233" type="hidden"></form>
+			</div><!-- #respond -->
+	<div style="clear: both"></div>
+</div><!-- #comments -->
+
+		
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+			<div id="secondary" class="widget-areas clear" role="complementary">
+							<div class="first widget-area">
+				<aside id="search-2" class="widget widget_search"><form role="search" method="get" class="search-form" action="https://newseasandbeyond.wordpress.com/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input class="search-field" placeholder="Search …" name="s" type="search">
+	</label>
+	<input class="search-submit" value="Search" type="submit">
+</form>
+</aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h1 class="widget-title">Recent Posts</h1>		<ul>
+											<li>
+					<a href="https://newseasandbeyond.wordpress.com/2014/01/27/creating-in-memory-zip-file-with-python/">Creating in memory zip file with&nbsp;Python</a>
+									</li>
+											<li>
+					<a href="https://newseasandbeyond.wordpress.com/2014/01/19/how-to-setup-visual-studio-express-to-work-with-opengl-on-windows/">How to setup Visual Studio Express to work with OpenGL on&nbsp;Windows</a>
+									</li>
+											<li>
+					<a href="https://newseasandbeyond.wordpress.com/2014/01/12/how-to-setup-and-use-virtualenv-with-windows/">How to setup and use virtualenv with&nbsp;Windows</a>
+									</li>
+											<li>
+					<a href="https://newseasandbeyond.wordpress.com/2013/08/02/using-iframe-as-form-target-to-simulate-ajax/">Using iframe as form target to simulate&nbsp;AJAX</a>
+									</li>
+											<li>
+					<a href="https://newseasandbeyond.wordpress.com/2013/07/11/installing-sublime-text-2-on-debian/">Installing Sublime Text 2 on&nbsp;Debian</a>
+									</li>
+					</ul>
+		</aside><aside id="recent-comments-2" class="widget widget_recent_comments"><h1 class="widget-title">Recent Comments</h1>				<table class="recentcommentsavatar" cellspacing="0" cellpadding="0" border="0">
+					<tbody><tr><td title="Kaffe" class="recentcommentsavatartop" style="height:48px; width:48px;"><img alt="" src="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/5288a0ec73b4f17776c8959236570cfe.png" class="avatar avatar-48 grav-hashed grav-hijack" originals="48" src-orig="https://2.gravatar.com/avatar/5288a0ec73b4f17776c8959236570cfe?s=48&amp;d=identicon&amp;r=G" scale="1.5" id="grav-5288a0ec73b4f17776c8959236570cfe-0" width="48" height="48"></td><td class="recentcommentstexttop" style="">Kaffe on <a href="https://newseasandbeyond.wordpress.com/2013/07/11/adding-custom-keyboard-shortcut-on-debian/comment-page-1/#comment-50">Adding custom keyboard shortcu…</a></td></tr><tr><td title="Raheel Kamran" class="recentcommentsavatarend" style="height:48px; width:48px;"><a href="http://www.facebook.com/100002187469615" rel="nofollow"><img alt="" src="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/picture_002.jpg" class="avatar avatar-48" srcset="https://i2.wp.com/graph.facebook.com/v2.2/100002187469615/picture?q=type%3Dlarge%26_md5%3D44123cf145189f62e4fb6f27eeb33f2c&amp;resize=48%2C48&amp;zoom=2 1.5x" scale="1.5" width="48" height="48"></a></td><td class="recentcommentstextend" style=""><a href="http://www.facebook.com/100002187469615" rel="nofollow">Raheel Kamran</a> on <a href="https://newseasandbeyond.wordpress.com/2014/01/19/how-to-setup-visual-studio-express-to-work-with-opengl-on-windows/comment-page-1/#comment-47">How to setup Visual Studio Exp…</a></td></tr><tr><td title="Tom Pauwaert" class="recentcommentsavatarend" style="height:48px; width:48px;"><a href="https://www.facebook.com/app_scoped_user_id/10206783722488479/" rel="nofollow"><img alt="" src="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/picture.jpg" class="avatar avatar-48" srcset="https://i0.wp.com/graph.facebook.com/v2.2/10206783722488479/picture?q=type%3Dlarge%26_md5%3D910a69290c2ce9ba1f73328c1df62adb&amp;resize=48%2C48&amp;zoom=2 1.5x" scale="1.5" width="48" height="48"></a></td><td class="recentcommentstextend" style=""><a href="https://www.facebook.com/app_scoped_user_id/10206783722488479/" rel="nofollow">Tom Pauwaert</a> on <a href="https://newseasandbeyond.wordpress.com/2014/01/27/creating-in-memory-zip-file-with-python/comment-page-1/#comment-44">Creating in memory zip file wi…</a></td></tr><tr><td title="taimoor" class="recentcommentsavatarend" style="height:48px; width:48px;"><img alt="" src="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/f4bb0a5f78e27199be26787a75ccc15e_002.png" class="avatar avatar-48 grav-hashed grav-hijack" originals="48" src-orig="https://0.gravatar.com/avatar/f4bb0a5f78e27199be26787a75ccc15e?s=48&amp;d=identicon&amp;r=G" scale="1.5" id="grav-f4bb0a5f78e27199be26787a75ccc15e-1" width="48" height="48"></td><td class="recentcommentstextend" style="">taimoor on <a href="https://newseasandbeyond.wordpress.com/2014/01/19/how-to-setup-visual-studio-express-to-work-with-opengl-on-windows/comment-page-1/#comment-22">How to setup Visual Studio Exp…</a></td></tr><tr><td title="JohnR" class="recentcommentsavatarend" style="height:48px; width:48px;"><img alt="" src="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/88d46b8b484b624876e2d0d3f8e39296_002.png" class="avatar avatar-48 grav-hashed grav-hijack" originals="48" src-orig="https://2.gravatar.com/avatar/88d46b8b484b624876e2d0d3f8e39296?s=48&amp;d=identicon&amp;r=G" scale="1.5" id="grav-88d46b8b484b624876e2d0d3f8e39296-1" width="48" height="48"></td><td class="recentcommentstextend" style="">JohnR on <a href="https://newseasandbeyond.wordpress.com/2014/01/19/how-to-setup-visual-studio-express-to-work-with-opengl-on-windows/comment-page-1/#comment-21">How to setup Visual Studio Exp…</a></td></tr>				</tbody></table>
+				</aside><aside id="archives-2" class="widget widget_archive"><h1 class="widget-title">Archives</h1>		<ul>
+			<li><a href="https://newseasandbeyond.wordpress.com/2014/01/">January 2014</a></li>
+	<li><a href="https://newseasandbeyond.wordpress.com/2013/08/">August 2013</a></li>
+	<li><a href="https://newseasandbeyond.wordpress.com/2013/07/">July 2013</a></li>
+	<li><a href="https://newseasandbeyond.wordpress.com/2013/05/">May 2013</a></li>
+		</ul>
+		</aside><aside id="categories-2" class="widget widget_categories"><h1 class="widget-title">Categories</h1>		<ul>
+	<li class="cat-item cat-item-2426"><a href="https://newseasandbeyond.wordpress.com/category/c/">C</a>
+</li>
+	<li class="cat-item cat-item-1634593"><a href="https://newseasandbeyond.wordpress.com/category/c-2/">C++</a>
+</li>
+	<li class="cat-item cat-item-35195889"><a href="https://newseasandbeyond.wordpress.com/category/configuration-2/">Configuration</a>
+</li>
+	<li class="cat-item cat-item-428"><a href="https://newseasandbeyond.wordpress.com/category/debian/">Debian</a>
+</li>
+	<li class="cat-item cat-item-25622"><a href="https://newseasandbeyond.wordpress.com/category/installation/">Installation</a>
+</li>
+	<li class="cat-item cat-item-196"><a href="https://newseasandbeyond.wordpress.com/category/programming/">Programming</a>
+</li>
+	<li class="cat-item cat-item-832"><a href="https://newseasandbeyond.wordpress.com/category/python/">Python</a>
+</li>
+	<li class="cat-item cat-item-1981"><a href="https://newseasandbeyond.wordpress.com/category/tools/">Tools</a>
+</li>
+	<li class="cat-item cat-item-2932"><a href="https://newseasandbeyond.wordpress.com/category/tutorial/">Tutorial</a>
+</li>
+	<li class="cat-item cat-item-800"><a href="https://newseasandbeyond.wordpress.com/category/windows/">Windows</a>
+</li>
+		</ul>
+</aside><aside id="meta-2" class="widget widget_meta"><h1 class="widget-title">Meta</h1>			<ul>
+			<li><a href="https://wordpress.com/start?ref=wplogin">Register</a></li>			<li><a href="https://newseasandbeyond.wordpress.com/wp-login.php">Log in</a></li>
+			<li><a href="https://newseasandbeyond.wordpress.com/feed/">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://newseasandbeyond.wordpress.com/comments/feed/">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://wordpress.com/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.com</a></li>			</ul>
+			</aside>			</div>
+							</div><!-- #secondary -->
+
+		<div class="site-info">
+						<div class="footer-search">
+				<form role="search" method="get" class="search-form" action="https://newseasandbeyond.wordpress.com/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input class="search-field" placeholder="Search …" name="s" type="search">
+	</label>
+	<input class="search-submit" value="Search" type="submit">
+</form>
+			</div>
+			<div class="footer-credits">
+								<a href="https://wordpress.com/?ref=footer_blog">Blog at WordPress.com.</a>
+				
+							</div>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<!--  -->
+<script type="text/javascript" src="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/gprofiles.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/wpgroho.js"></script>
+
+	<script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+
+			if (typeof Gravatar === "undefined"){
+				return;
+			}
+
+			if ( typeof Gravatar.init !== "function" ) {
+				return;
+			}			
+
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script>
+
+		<div style="display:none">
+	<div class="grofile-hash-map-d433a9791010f70670dd9c10ddc7f6a7">
+	</div>
+	<div class="grofile-hash-map-b351d04a7750d1fed613c3e1713cded6">
+	</div>
+	<div class="grofile-hash-map-b25be444a428e028269221686a7889e7">
+	</div>
+	<div class="grofile-hash-map-88d46b8b484b624876e2d0d3f8e39296">
+	</div>
+	<div class="grofile-hash-map-f4bb0a5f78e27199be26787a75ccc15e">
+	</div>
+	<div class="grofile-hash-map-efee8d990eb638974cfe303999f6afd5">
+	</div>
+	<div class="grofile-hash-map-5288a0ec73b4f17776c8959236570cfe">
+	</div>
+	<div class="grofile-hash-map-ed29ecf94a210419023e29a89388eeca">
+	</div>
+	</div>
+<script type="text/javascript">
+/* <![CDATA[ */
+var HighlanderComments = {"loggingInText":"Logging 
+In\u2026","submittingText":"Posting 
+Comment\u2026","postCommentText":"Post 
+Comment","connectingToText":"Connecting to %s","commentingAsText":"%1$s:
+ You are commenting using your %2$s account.","logoutText":"Log 
+Out","loginText":"Log 
+In","connectURL":"https:\/\/newseasandbeyond.wordpress.com\/public.api\/connect\/?action=request","logoutURL":"https:\/\/newseasandbeyond.wordpress.com\/wp-login.php?action=logout&_wpnonce=d7db938f47","homeURL":"https:\/\/newseasandbeyond.wordpress.com\/","postID":"71","gravDefault":"identicon","enterACommentError":"Please
+ enter a comment","enterEmailError":"Please enter your email address 
+here","invalidEmailError":"Invalid email 
+address","enterAuthorError":"Please enter your name 
+here","gravatarFromEmail":"This picture will show whenever you leave a 
+comment. Click to customize it.","logInToExternalAccount":"Log in to use
+ details from one of these 
+accounts.","change":"Change","changeAccount":"Change 
+Account","comment_registration":"0","userIsLoggedIn":"","isJetpack":"","text_direction":"ltr"};
+/*
+ ]]> */
+</script>
+<script type="text/javascript" src="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/a_003.js"></script>
+
+	<div id="carousel-reblog-box">
+		<form action="#" name="carousel-reblog">
+			<textarea id="carousel-reblog-content" name="carousel-reblog-content" placeholder="Add your thoughts here... (optional)"></textarea>
+			<label for="carousel-reblog-to-blog-id" id="carousel-reblog-lblogid">Post to</label>
+			<select name="carousel-reblog-to-blog-id" id="carousel-reblog-to-blog-id">
+						</select>
+
+			<div class="submit">
+				<span class="canceltext"><a href="#" class="cancel">Cancel</a></span>
+				<input name="carousel-reblog-submit" class="button" id="carousel-reblog-submit" value="Reblog Post" type="submit">
+				<input id="carousel-reblog-blog-id" value="52761869" type="hidden">
+				<input id="carousel-reblog-blog-url" value="https://newseasandbeyond.wordpress.com" type="hidden">
+				<input id="carousel-reblog-blog-title" value="Programming Tips and More" type="hidden">
+				<input id="carousel-reblog-post-url" value="" type="hidden">
+				<input id="carousel-reblog-post-title" value="" type="hidden">
+			</div>
+
+			<input id="_wpnonce" name="_wpnonce" value="11c36c14df" type="hidden"><input name="_wp_http_referer" value="/2014/01/19/how-to-setup-visual-studio-express-to-work-with-opengl-on-windows/" type="hidden">		</form>
+
+		<div class="arrow"></div>
+	</div>
+
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = 
+{"https:\/\/newseasandbeyond.wordpress.com\/2014\/01\/19\/how-to-setup-visual-studio-express-to-work-with-opengl-on-windows\/":71};
+
+	</script>
+		<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-twitter' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-facebook' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+		});
+		</script>
+		<link rel="stylesheet" id="all-css-0-3" href="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/jetpack-carousel.css" type="text/css" media="all">
+<!--[if lte IE 8]>
+<link rel='stylesheet' id='jetpack-carousel-ie8fix-css'  href='https://s1.wp.com/wp-content/mu-plugins/carousel/jetpack-carousel-ie8fix.css?m=1412618825h&#038;ver=20121024' type='text/css' media='all' />
+<![endif]-->
+<script type="text/javascript">
+/* <![CDATA[ */
+var actionbardata = {"siteID":"52761869","siteName":"Programming Tips 
+and 
+More","siteURL":"http:\/\/newseasandbeyond.wordpress.com","icon":"<img 
+alt='' src='https:\/\/s1.wp.com\/i\/logo\/wpcom-gray-white.png' 
+class='avatar avatar-50' height='50' width='50' 
+\/>","canManageOptions":"","canCustomizeSite":"","isFollowing":"","themeSlug":"pub\/typo","signupURL":"https:\/\/wordpress.com\/start\/","loginURL":"https:\/\/newseasandbeyond.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fnewseasandbeyond.wordpress.com%2F2014%2F01%2F19%2Fhow-to-setup-visual-studio-express-to-work-with-opengl-on-windows%2F","themeURL":"","xhrURL":"https:\/\/newseasandbeyond.wordpress.com\/wp-admin\/admin-ajax.php","nonce":"d04b95659e","isSingular":"1","isFolded":"","isLoggedIn":"","isMobile":"","subscribeNonce":"<input
+ type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"2a8d2d87e4\" 
+\/>","referer":"https:\/\/newseasandbeyond.wordpress.com\/2014\/01\/19\/how-to-setup-visual-studio-express-to-work-with-opengl-on-windows\/","canFollow":"1","feedID":"11387167","statusMessage":"","customizeLink":"https:\/\/newseasandbeyond.wordpress.com\/wp-admin\/customize.php?url=https%3A%2F%2Fnewseasandbeyond.wordpress.com%2F2014%2F01%2F19%2Fhow-to-setup-visual-studio-express-to-work-with-opengl-on-windows%2F","postID":"71","shortlink":"https:\/\/wp.me\/p3znLT-19","canEditPost":"","editLink":"https:\/\/wordpress.com\/post\/newseasandbeyond.wordpress.com\/71","statsLink":"https:\/\/wordpress.com\/stats\/post\/71\/newseasandbeyond.wordpress.com","i18n":{"view":"View
+ 
+site","follow":"Follow","following":"Following","edit":"Edit","login":"Log
+ in","signup":"Sign up","customize":"Customize","report":"Report this 
+content","themeInfo":"Get theme: Typo","shortlink":"Copy 
+shortlink","copied":"Copied","followedText":"New posts from this site 
+will now appear in your <a 
+href=\"https:\/\/wordpress.com\/\">Reader<\/a>","foldBar":"Collapse this
+ bar","unfoldBar":"Expand this bar","editSubs":"Manage 
+subscriptions","viewReader":"View site in Reader","viewReadPost":"View 
+post in Reader","subscribe":"Sign me up","enterEmail":"Enter your email 
+address","followers":"","alreadyUser":"Already have a WordPress.com 
+account? <a 
+href=\"https:\/\/newseasandbeyond.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fnewseasandbeyond.wordpress.com%2F2014%2F01%2F19%2Fhow-to-setup-visual-studio-express-to-work-with-opengl-on-windows%2F\">Log
+ in now.<\/a>","stats":"Stats"}};
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var jetpackCarouselStrings = 
+{"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"en","ajaxurl":"https:\/\/newseasandbeyond.wordpress.com\/wp-admin\/admin-ajax.php","nonce":"776ead6b87","display_exif":"1","display_geo":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"black","comment":"Comment","post_comment":"Post
+ Comment","write_comment":"Write a 
+Comment...","loading_comments":"Loading 
+Comments...","download_original":"View full size <span 
+class=\"photo-size\">{0}<span 
+class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Please
+ be sure to submit some text with your 
+comment.","no_comment_email":"Please provide an email address to 
+comment.","no_comment_author":"Please provide your name to 
+comment.","comment_post_error":"Sorry, but there was an error posting 
+your comment. Please try again later.","comment_approved":"Your comment 
+was approved.","comment_unapproved":"Your comment is in 
+moderation.","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter
+ Speed","focal_length":"Focal 
+Length","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/newseasandbeyond.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fnewseasandbeyond.wordpress.com%2F2014%2F01%2F19%2Fhow-to-setup-visual-studio-express-to-work-with-opengl-on-windows%2F","blog_id":"52761869","local_comments_commenting_as":"<fieldset><label
+ for=\"email\">Email (Required)<\/label> <input type=\"text\" 
+name=\"email\" class=\"jp-carousel-comment-form-field 
+jp-carousel-comment-form-text-field\" 
+id=\"jp-carousel-comment-form-email-field\" 
+\/><\/fieldset><fieldset><label for=\"author\">Name (Required)<\/label> 
+<input type=\"text\" name=\"author\" 
+class=\"jp-carousel-comment-form-field 
+jp-carousel-comment-form-text-field\" 
+id=\"jp-carousel-comment-form-author-field\" 
+\/><\/fieldset><fieldset><label for=\"url\">Website<\/label> <input 
+type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field 
+jp-carousel-comment-form-text-field\" 
+id=\"jp-carousel-comment-form-url-field\" 
+\/><\/fieldset>","reblog":"Reblog","reblogged":"Reblogged","reblog_add_thoughts":"Add
+ your thoughts here... 
+(optional)","reblogging":"Reblogging...","post_reblog":"Post 
+Reblog","stats_query_args":"blog=52761869&v=wpcom&tz=1&user_id=0&subd=newseasandbeyond","is_public":"1","reblog_enabled":""};
+/*
+ ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/a.js"></script><div id="actionbar" class="actnbr-pub-typo actnbr-has-follow"><ul><li class="actnbr-btn actnbr-hidden"> 			    	<a class="actnbr-action actnbr-actn-follow" href=""><svg class="gridicon gridicon__follow" height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M23 16v2h-3v3h-2v-3h-3v-2h3v-3h2v3h3zM20 2v9h-4v3h-3v4H4c-1.1 0-2-.9-2-2V2h18zM8 13v-1H4v1h4zm3-3H4v1h7v-1zm0-2H4v1h7V8zm7-4H4v2h14V4z"></path></g></svg><span>Follow</span></a> 			    	<div class="actnbr-popover tip tip-top-left actnbr-notice"> 			    		<div class="tip-arrow"></div> 			    		<div class="tip-inner actnbr-follow-bubble"></div> 			    	</div> 			    </li><li class="actnbr-ellipsis actnbr-hidden"> 			  <svg class="gridicon gridicon__ellipsis" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><circle cx="5" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle><circle cx="12" cy="12" r="2"></circle></g></svg> 			  <div class="actnbr-popover tip tip-top-left actnbr-more"> 			  	<div class="tip-arrow"></div> 			  	<div class="tip-inner"> 				  <ul> 				    <li class="actnbr-sitename"><a href="http://newseasandbeyond.wordpress.com/"><img alt="" src="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/wpcom-gray-white.png" class="avatar avatar-50" scale="0" width="50" height="50"> Programming Tips and More</a></li> 				   	<li class="actnbr-folded-customize"><a href="https://newseasandbeyond.wordpress.com/wp-admin/customize.php?url=https%3A%2F%2Fnewseasandbeyond.wordpress.com%2F2014%2F01%2F19%2Fhow-to-setup-visual-studio-express-to-work-with-opengl-on-windows%2F"><svg class="gridicon gridicon__customize" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M2 6c0-1.505.78-3.08 2-4 0 .845.69 2 2 2 1.657 0 3 1.343 3 3 0 .386-.08.752-.212 1.09.74.594 1.476 1.19 2.19 1.81L8.9 11.98c-.62-.716-1.214-1.454-1.807-2.192C6.753 9.92 6.387 10 6 10c-2.21 0-4-1.79-4-4zm12.152 6.848l1.34-1.34c.607.304 1.283.492 2.008.492 2.485 0 4.5-2.015 4.5-4.5 0-.725-.188-1.4-.493-2.007L18 9l-2-2 3.507-3.507C18.9 3.188 18.225 3 17.5 3 15.015 3 13 5.015 13 7.5c0 .725.188 1.4.493 2.007L3 20l2 2 6.848-6.848c1.885 1.928 3.874 3.753 5.977 5.45l1.425 1.148 1.5-1.5-1.15-1.425c-1.695-2.103-3.52-4.092-5.448-5.977z" data-reactid=".2.1.1:0.1b.0"></path></g></svg><span>Customize<span></span></span></a></li> 				    <li class="actnbr-folded-follow"><a class="actnbr-action actnbr-actn-follow" href=""><svg class="gridicon gridicon__follow" height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M23 16v2h-3v3h-2v-3h-3v-2h3v-3h2v3h3zM20 2v9h-4v3h-3v4H4c-1.1 0-2-.9-2-2V2h18zM8 13v-1H4v1h4zm3-3H4v1h7v-1zm0-2H4v1h7V8zm7-4H4v2h14V4z"></path></g></svg><span>Follow</span></a></li> 					<li class="actnbr-signup"><a href="https://wordpress.com/start/">Sign up</a></li> 				    <li class="actnbr-login"><a href="https://newseasandbeyond.wordpress.com/wp-login.php?redirect_to=https%3A%2F%2Fnewseasandbeyond.wordpress.com%2F2014%2F01%2F19%2Fhow-to-setup-visual-studio-express-to-work-with-opengl-on-windows%2F">Log in</a></li> 				     				    <li class="actnbr-shortlink"><a href="https://wp.me/p3znLT-19">Copy shortlink</a></li> 				    <li class="flb-report"><a href="http://en.wordpress.com/abuse/">Report this content</a></li> 				     				     				    <li class="actnbr-subs"><a href="https://subscribe.wordpress.com/">Manage subscriptions</a></li> 				    <li class="actnbr-fold"><a href="">Collapse this bar</a></li> 			      </ul> 			    </div> 		      </div> 		    </li> 	      </ul></div>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script>	<script type="text/javascript">
+	var skimlinks_pub_id = "725X584219"
+	var skimlinks_sitename = "newseasandbeyond.wordpress.com";
+	</script>
+	<script type="text/javascript" defer="defer" src="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/725X1342.js"></script>		<iframe src="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/master.htm" scrolling="no" id="likes-master" name="likes-master" style="display:none;"></iframe>
+		<div id="likes-other-gravatars"><div class="likes-text"><span>%d</span> bloggers like this:</div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+<script src="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/w.js" type="text/javascript" async="" defer="defer"></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', 
+{'blog_id':'52761869','blog_tz':'1','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view',
+ 
+{'blog':'52761869','v':'wpcom','tz':'1','user_id':'0','post':'71','subd':'newseasandbeyond'}]);
+_stq.push(['extra',
+ 
+{'crypt':'UE5XaGUuOTlwaD85flAmcm1mcmZsaDhkV11YdTdvUG14Q2VDQTR4LlUsLi82dU1mai9BMmcsaFtjRFBiOW96P0RXd3NsTXlPTGclX1VsZnlzM0d1YWdDT08vd19qdHQscSw0OUZrR2JVZjgtM2Z0cHBkK1F2YUlRVklOTlByUlglTW13MFVKSzlTUnA5Nz9Tam1kQlVdX0JDSXdSWTlyNGwlJkRnYXAwSXZyb2l0Z2dqT2p6NGQ3cGMrK1pWMWVVaG5EVHptSE9SNnhzS21jMFk4SD0zLHREUzBONk5EbHVXTlkwMFlQMTBZWGVTWGsycHFOTl1ddEZ6Z1NWLnQ0d35aNWd+NW81TStLY1J6TFg4P0tMdkdUY0w2U1s='}]);
+_stq.push([
+ 'clickTrackerInit', '52761869', '71' ]);
+	</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + 
+wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + 
+wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + 
+'//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba='
+ + Math.random();
+	}
+	
+}
+</script>
+
+<img src="How%20to%20setup%20Visual%20Studio%20Express%20to%20work%20with%20OpenGL%20on%20Windows%20_%20Programming%20Tips%20and%20More_files/g.gif" alt=":)" id="wpstats" scale="0"></body></html>
